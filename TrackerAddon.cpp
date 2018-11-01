@@ -18,7 +18,7 @@ process_refs(entry_ref dir_ref, BMessage* msg, void* reserved)
 	entry_ref ref;
 	if (msg->FindRef("refs",0,&ref) == B_OK)
 	{
-		out << "-rotate 90 " << path.Path() << "/" << ref.name << " " << path.Path() << "/" << ref.name;
+		out << "-rotate 90 '" << path.Path() << "/" << ref.name << "' '" << path.Path() << "/" << ref.name << "'";
 	}
 	
 	//BAlert* alert = new BAlert("RotateAddon",out.String(),"OK");
